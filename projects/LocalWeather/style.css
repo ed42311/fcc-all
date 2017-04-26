@@ -1,0 +1,70 @@
+.flex-header-btn {
+	width:100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 2px #354148 solid;
+	padding: .6em;
+}
+
+.flex-item-sup {
+	background-color: #738F9D;
+}
+
+.flex-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn {
+	background-color: #8DB0C2;
+	margin: 2px;
+	border: gray;
+	border-radius: .4em;
+	padding: .2em;
+	-webkit-transition: box-shadow .5s; /* Safari */
+    transition: box-shadow .5s;
+}
+
+.flex-item#get-weather {
+	margin-right: .75em;
+	flex: 1 1 0;
+}
+
+.flex-item#readout {
+	flex: 3 1 0;
+	background-color: white;	
+}
+
+.flex-item#temp-type {
+	margin-left: .75em;
+	flex: 2 1 0;	
+}
+
+.flex-item#get-weather:hover {
+	-webkit-box-shadow: inset 10px -7px 177px 13px rgba(53,65,72,1);
+    -moz-box-shadow: inset 10px -7px 177px 13px rgba(53,65,72,1);
+    box-shadow: inset 10px -7px 177px 13px rgba(53,65,72,1);
+}
+
+.flex-item#temp-type:hover {
+	-webkit-box-shadow: inset 10px -7px 177px 13px rgba(53,65,72,1);
+    -moz-box-shadow: inset 10px -7px 177px 13px rgba(53,65,72,1);
+    box-shadow: inset 10px -7px 177px 13px rgba(53,65,72,1);
+}
+
+.header {
+	height: 6em;
+}
+
+.body {
+	height: 80em;
+	color: black;
+}
+
+.weather-box {
+	height: 800px;
+	height: 800px;
+	color: black;
+}

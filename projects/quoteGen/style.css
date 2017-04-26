@@ -1,0 +1,19 @@
+body {
+  background-color: silver;
+  text-align: center;
+}
+.quoteBlock {
+  width: 80%;
+  height: 50%;
+  background-color: blue;
+  margin: 50px auto 0 auto;
+  padding: 30px;
+  color: black;
+  border-radius: 14px;
+}
+.internalQuoteBlock {
+  background-color: silver;
+  padding: 15px 0 20px 0;
+  margin: 0 0 20px 0;
+  border-radius: 5px;
+}
