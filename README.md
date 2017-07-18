@@ -4,7 +4,8 @@
 *********
 #### Challenges
 
-**Beginner**
+-  **[Beginner](challenges/beginner)**
 
-**Intermediate**
-- [Sum All Fibonacci Sequences](challenges/intermediate)
+-  **[Intermediate](challenges/intermediate)**
+
+-  **[Advanced](challenges/advanced)**
