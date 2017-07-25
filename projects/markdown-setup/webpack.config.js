@@ -1,24 +1,54 @@
-var HTMLWebpackPlugin = require('html-webpack-plugin');
-var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
-	template: __dirname + '/app/index.html',
+const {resolve} = require('path');
+const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
+	template: __dirname + '/src/index.html',
 	filename: 'index.html',
 	inject: 'body'
 });
+const extractTextPluginConfig = new ExtractTextPlugin({
+	filename: 'styles.css',
+	 allChunks: true
+});
 
 module.exports = {
-	entry: __dirname + '/app/index.js',
+	context: resolve(__dirname, 'src'),
+	 entry: [
+		 './index.js'
+	 ],
+  output: {
+	  filename: 'main.js',
+		path: __dirname + '/build'
+  },
+	devtool: 'source-map',
 	module: {
-		loaders: [
+		rules: [
 			{
-				test: /\.js$/,
-				exclude: /node_modules/,
-				loader: 'babel-loader'
-			}
+			 test: /\.js?$/,
+			 use: ['babel-loader',],
+			 exclude: /node_modules/
+		  },
+			{
+	      test: /\.scss$/,
+	      use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
+	              use: [
+	                  {
+	                      loader: "css-loader"
+	                  },
+	                  {
+	                      loader: "sass-loader"
+	                  }
+	              ],
+	              fallback: "style-loader"
+	          }
+	      ))
+	    },
 		]
 	},
-	output: {
-		filename: 'transformed.js',
-		path: __dirname + '/build'
-	},
-	plugins: [HTMLWebpackPluginConfig]
+	plugins: [
+		HTMLWebpackPluginConfig,
+		new webpack.NamedModulesPlugin(),
+    extractTextPluginConfig
+	]
 };
