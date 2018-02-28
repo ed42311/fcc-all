@@ -1,0 +1,25 @@
+body {
+}
+
+.flexContainer {
+  display: flex;
+}
+
+.calcButton {
+  width: 20px;
+  height: 40px;
+  background-color: red;
+  text-align: center;
+  border: 1px solid black;
+  padding: 2rem;
+}
+
+
+.calcButton {
+  width: 20px;
+  height: 40px;
+  background-color: red;
+  text-align: center;
+  border: 1px solid black;
+  padding: 2rem;
+}
