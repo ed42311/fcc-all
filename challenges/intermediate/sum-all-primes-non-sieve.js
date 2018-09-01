@@ -3,11 +3,8 @@ function returnTrueIf (thisNumberIsPrime)
 {
     if (thisNumberIsPrime < 2) return false;
     var squareRootOfNumber = Math.floor(Math.sqrt(thisNumberIsPrime));
-
-    for (var i = 2; i <= squareRootOfNumber; i++)
-    {
-        if (thisNumberIsPrime % i == 0)
-        {
+    for (var i = 2; i <= squareRootOfNumber; i++) {
+        if (thisNumberIsPrime % i == 0) {
             return false;
         }
     }
@@ -15,7 +12,7 @@ function returnTrueIf (thisNumberIsPrime)
 }
 
 function checkInput (input) {
-    var result = []
+    var result = [1,2]
     for(var i = 0; i < input; i++){
         if(returnTrueIf(i)) {
           result.push(i);
